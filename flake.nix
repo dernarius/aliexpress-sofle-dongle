@@ -42,13 +42,13 @@
       dongle-nano = builder (commonArgs // {
         name = "dongle-nano-firmware";
         board = "nice_nano_v2";
-        shield = "sweep_dongle dongle_display"; 
+        shield = "dongle_display"; 
       });
 
       dongle-xiao = builder (commonArgs // {
         name = "dongle-xiao-firmware";
         board = "xiao_ble";
-        shield = "sweep_dongle dongle_display"; 
+        shield = "dongle_display"; 
       });
 
       all = nixpkgs.legacyPackages.${system}.linkFarm "all-firmwares" [
