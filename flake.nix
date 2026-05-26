@@ -17,7 +17,7 @@
       # Common arguments shared across all pieces
       commonArgs = {
         src = nixpkgs.lib.sourceFilesBySuffices self [ ".board" ".cmake" ".conf" ".defconfig" ".dts" ".dtsi" ".json" ".keymap" ".overlay" ".shield" ".yml" "_defconfig" ];
-        zephyrDepsHash = "sha256-GUXpdxC7LrXw02Yxrdqzi9qrHFZdIcX44iGfGm3v9lM="; # Keep empty to force hash recalculation on your first run
+        zephyrDepsHash = "sha256-gsqiTDJLAihVyBXVFlgXwqRmlREcFJctKpl4tEWmVlY="; # Keep empty to force hash recalculation on your first run
         meta = {
           description = "ZMK firmware for Eyelash Sofle & Dongle";
           license = nixpkgs.lib.licenses.mit;
