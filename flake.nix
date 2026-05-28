@@ -40,22 +40,22 @@
       });
 
       dongle-nano = builder (commonArgs // {
-        name = "dongle-nano-firmware";
+        name = "dongle-firmware";
         board = "nice_nano_v2";
-        shield = "dongle_display"; 
+        shield = "dongle dongle_display"; 
       });
 
-      dongle-xiao = builder (commonArgs // {
-        name = "dongle-xiao-firmware";
-        board = "xiao_ble";
-        shield = "dongle_display"; 
+      settings-reset = builder (commonArgs // {
+        name = "settings-reset-firmware";
+        board = "nice_nano_v2";
+        shield = "settings_reset";
       });
 
       all = nixpkgs.legacyPackages.${system}.linkFarm "all-firmwares" [
         { name = "left"; path = left; }
         { name = "right"; path = right; }
         { name = "dongle-nano"; path = dongle-nano; }
-        { name = "dongle-xiao"; path = dongle-xiao; }
+        { name = "settings-reset"; path = settings-reset; }
       ];
 
       # Set 'all' as the default package
